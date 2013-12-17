@@ -1,4 +1,4 @@
-SHADERS = CopyShader.js
+SHADERS = CopyShader.js HorizontalTiltShiftShader.js VerticalTiltShiftShader.js
 POSTPROCESSING = EffectComposer.js ShaderPass.js RenderPass.js MaskPass.js
 
 SHADERS_SOURCE = https://raw.github.com/mrdoob/three.js/master/examples/js/shaders/
