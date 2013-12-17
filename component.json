@@ -1,0 +1,13 @@
+{
+  "name": "three-postprocessing",
+  "repo": "nomilous/three-postprocessing",
+  "description": "Thee.js PostProcessing Classes",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "cvdlab/three": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": ["index.js"]
+}
