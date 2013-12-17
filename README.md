@@ -3,6 +3,9 @@
 
 only included the bits i wanted - see makefile
 
+plenty more usefull bits there (in the three examples), so much still to be done here, fork away...
+
+
 ### install 
 
 ```
