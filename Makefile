@@ -1,5 +1,5 @@
 SHADERS = CopyShader.js HorizontalTiltShiftShader.js VerticalTiltShiftShader.js BokehShader.js BokehShader2.js KaleidoShader.js 
-POSTPROCESSING = EffectComposer.js ShaderPass.js RenderPass.js MaskPass.js
+POSTPROCESSING = EffectComposer.js ShaderPass.js RenderPass.js MaskPass.js BokehPass.js
 
 SHADERS_SOURCE = https://raw.github.com/mrdoob/three.js/master/examples/js/shaders/
 SHADERS_PATH = src/examples/js/shaders/
