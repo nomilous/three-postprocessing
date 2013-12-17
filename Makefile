@@ -4,7 +4,7 @@ POSTPROCESSING_SOURCE = https://raw.github.com/mrdoob/three.js/master/examples/j
 POSTPROCESSING_PATH = src/examples/js/postprocessing/
 
 SHADERS = CopyShader.js
-POSTPROCESSING = EffectComposer.js ShaderPass.js RenderPass.js
+POSTPROCESSING = EffectComposer.js ShaderPass.js RenderPass.js MaskPass.js
 
 shaders: 
 	mkdir -p ${SHADERS_PATH}
