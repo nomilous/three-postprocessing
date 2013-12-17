@@ -1,16 +1,29 @@
-update: 
+SHADERS_SOURCE = https://raw.github.com/mrdoob/three.js/master/examples/js/shaders/
+SHADERS_PATH = src/examples/js/shaders/
+POSTPROCESSING_SOURCE = https://raw.github.com/mrdoob/three.js/master/examples/js/postprocessing/
+POSTPROCESSING_PATH = src/examples/js/postprocessing/
 
-	mkdir -p src/examples/js/shaders/
-	rm -fr src/examples/js/shaders/*
+SHADERS = CopyShader.js
+POSTPROCESSING = EffectComposer.js ShaderPass.js
 
-	curl -s https://raw.github.com/mrdoob/three.js/master/examples/js/shaders/CopyShader.js > src/examples/js/shaders/CopyShader.js
+shaders: 
+	mkdir -p ${SHADERS_PATH}
+	rm -fr ${SHADERS_PATH}/*
+	for FILE in ${SHADERS}; \
+		do curl -s ${SHADERS_SOURCE}/$${FILE} > ${SHADERS_PATH}/$${FILE}; \
+	done
 
-	mkdir -p src/examples/js/postprocessing/
-	rm -fr src/examples/js/postprocessing/*
+postprocessing:
+	mkdir -p ${POSTPROCESSING_PATH}
+	rm -fr ${POSTPROCESSING_PATH}/*
+	for FILE in ${POSTPROCESSING}; \
+		do curl -s ${POSTPROCESSING_SOURCE}/$${FILE} > ${POSTPROCESSING_PATH}/$${FILE}; \
+	done
 
-	curl -s https://raw.github.com/mrdoob/three.js/master/examples/js/postprocessing/EffectComposer.js > src/examples/js/postprocessing/EffectComposer.js
-	curl -s https://raw.github.com/mrdoob/three.js/master/examples/js/postprocessing/ShaderPass.js > src/examples/js/postprocessing/ShaderPass.js
 
+update: shaders postprocessing
+	echo "THREE = require('three');\n\n" > index.js
+	cat ${SHADERS_PATH}/*.js ${POSTPROCESSING_PATH}/*.js >> index.js
 
 
 build: components
