@@ -9,6 +9,7 @@ update:
 	rm -fr src/examples/js/postprocessing/*
 
 	curl -s https://raw.github.com/mrdoob/three.js/master/examples/js/postprocessing/EffectComposer.js > src/examples/js/postprocessing/EffectComposer.js
+	curl -s https://raw.github.com/mrdoob/three.js/master/examples/js/postprocessing/ShaderPass.js > src/examples/js/postprocessing/ShaderPass.js
 
 
 
